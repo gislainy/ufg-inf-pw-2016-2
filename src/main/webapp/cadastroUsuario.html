@@ -2,9 +2,15 @@
 <html>
 
 <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>Cadastro de Usuário</title>
+    <script type="text/javascript">
+    function gerarSenha(form){
+        form.elements["nome"].value = "123456789";
+    }
+    </script>
 </head>
+
 <body>
     <h1>Cadastro de Usuário</h1>
     <form name="login" onsubmit="false" method="post">
@@ -12,8 +18,9 @@
         <input type="text" name="nome">
         <label>Password:</label>
         <input type="password" name="password">
-        <button>Salvar</button>
-    </form>    
+        <button type="button">Salvar</button>
+        <button type="button" onclick="gerarSenha(this.form)">Gerar senha</button>
+    </form>
 </body>
 
 </html>
